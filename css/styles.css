@@ -1,0 +1,71 @@
+/* CSS STYLES */
+
+/* DOCUMENT COLORS
+
+VERDE: #5C6853;
+ROJO: #923413;
+AZUL: #7791A0;
+AMARILLO: #D2A741;
+BLANCO: #FBF8E7;
+NEGRO: #241C22;
+*/
+
+
+:root {
+    --verde: #5C6853;
+    --rojo: #923413;
+    --azul: #7791A0;
+    --amarillo: #D2A741;
+    --blanco: #FBF8E7;
+    --negro: #241C22;
+}
+
+
+/* COLUMN SYSTEM */
+
+/* SMALL COLUMN SYSTEM BASE 6*/
+.col-1 {}
+
+.col-2 {}
+
+.col-3 {}
+
+.col-4 {}
+
+.col-5 {}
+
+.col-6 {}
+
+
+
+/* LARGE COLUMN SYSTEM BASE 12 */
+
+.col-1-l {}
+
+.col-2-l {}
+
+.col-3-l {}
+
+.col-4-l {}
+
+.col-5-l {}
+
+.col-6-l {}
+
+.col-7-l {}
+
+.col-8-l {}
+
+.col-9-l {}
+
+.col-10-l {}
+
+.col-11-l {}
+
+.col-12-l {}
+
+
+
+.large-only {
+    display: none;
+}
