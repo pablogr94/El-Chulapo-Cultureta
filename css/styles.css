@@ -32,18 +32,59 @@ html {
     font-size: 10px;
 }
 
-/* GLOBAL STYLES */
-
-.container {
-    margin-left: 20px;
-    margin-right: 20px;
+body {
     width: 100%;
 }
 
+main {}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure {}
+
+/* GLOBAL STYLES */
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .center-text {
     text-align: center;
 }
+
+.center-absolute {
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.center-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.border-bottom {
+    border-bottom: 0.5px solid;
+    border-bottom-color: var(--black);
+}
+
 
 /* COLUMN SYSTEM */
 
@@ -56,51 +97,112 @@ html {
 
 .col-4 {}
 
-.col-5 {}
+.col-5 {
+    width: calc((100vw - 40px) * (5/6));
+}
 
-.col-6 {}
+.col-6 {
+    width: calc((100vw - 40px) * (6/6));
+}
 
+.order-1 {
+    order: 1;
+}
 
+.order-2 {
+    order: 2;
+}
 
-/* LARGE COLUMN SYSTEM BASE 12 */
-
-.col-1-l {}
-
-.col-2-l {}
-
-.col-3-l {}
-
-.col-4-l {}
-
-.col-5-l {}
-
-.col-6-l {}
-
-.col-7-l {}
-
-.col-8-l {}
-
-.col-9-l {}
-
-.col-10-l {}
-
-.col-11-l {}
-
-.col-12-l {}
-
-
+.order-3 {
+    order: 3;
+}
 
 .large-only {
     display: none;
 }
 
-
+.small-only {
+    display: block;
+}
 
 
 /*===========INDEX STYLES=============*/
 
+.logo {
+    height: 22vh;
+    position: relative;
 
+}
 
+.logo img {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+}
+
+.home-background {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.home-background img {}
+
+.main-nav {
+    height: 63vh;
+}
+
+.main-nav ul {
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-content: stretch;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.item-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.item-title h1 {
+    font-size: 8vw;
+    line-height: 88%;
+}
+
+.item-title p {
+    font-size: 1.6rem;
+}
+
+.access {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.access button {
+    width: 90px;
+    height: 54px;
+}
 
 /*===========LOGIN STYLES=============*/
 
@@ -109,7 +211,240 @@ html {
 
 /*===========ARTICLE GALLERY STYLES=============*/
 
+.articles-gallery {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    max-width: 600px;
+}
+
+.articles-gallery article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    flex-flow: wrap;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.articles-gallery h2 {
+    font-size: 3rem;
+}
+
+.articles-gallery p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.articles-gallery article figure {
+    width: 100%;
+    height: 0;
+    padding-top: calc((175 / 320) * 100%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: border-radius 0.2s;
+    margin: 0 auto;
+}
+
+.articles-gallery article figure:hover {
+
+    border-radius: 0;
+}
+
+.articles-gallery article figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.articles-gallery .triple-image {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.articles-gallery .triple-image figure:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.articles-gallery .triple-image:hover figure {
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.articles-gallery .triple-image figure:first-child img {
+    object-position: 4% 50%;
+}
 
 
 
-/*===========ARTICLEs STYLES=============*/
+.articles-gallery .triple-image figure:last-child img {
+    object-position: 96% 50%;
+}
+
+/*===========ARTICLE STYLES=============*/
+
+
+
+
+
+/*===========MEDIA QYERY STYLES=============*/
+
+@media screen and (min-width: 600px) {}
+
+
+@media screen and (min-width: 900px) {
+
+
+    /* LARGE COLUMN SYSTEM BASE 12 */
+
+    .col-1-l {
+        width: calc(100vw * (1/12));
+    }
+
+    .col-2-l {}
+
+    .col-3-l {
+        width: calc(100vw * (3/12));
+    }
+
+    .col-4-l {
+        width: calc(100vw * (4/12));
+    }
+
+    .col-5-l {
+        width: calc(100vw * (5/12));
+    }
+
+    .col-6-l {}
+
+    .col-7-l {
+        width: calc(100vw * (7/12));
+    }
+
+    .col-8-l {}
+
+    .col-9-l {}
+
+    .col-10-l {}
+
+    .col-11-l {}
+
+    .col-12-l {}
+
+
+    .container {
+        padding: 0;
+    }
+
+    /*===========INDEX STYLES=============*/
+
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-nav {
+        order: -1;
+        height: 100vh;
+    }
+
+    .large-only {
+        display: block;
+    }
+
+    .small-only {
+        display: none;
+    }
+
+
+    .wrapper {
+        flex-direction: row;
+    }
+
+    main.container {
+        padding-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .main-nav ul li {
+        padding-left: 30px;
+        justify-content: flex-start;
+    }
+
+    .item-title h1 {
+        font-size: 4.8rem;
+    }
+
+    .iten-title p {
+        font-size: 1.6rem;
+    }
+
+    .index-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description {
+        height: 78vh;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-content: flex-end;
+    }
+
+    /*===========ARTICLE GALLERY STYLES=============*/
+
+    .gallery-wrapper {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .articles-gallery {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: center;
+        max-width: none;
+        margin-bottom: 60px;
+    }
+
+    .articles-gallery h2 {
+        font-size: 2.4vw;
+        line-height: 88%;
+    }
+
+    .articles-gallery p {
+        font-size: 1.2vw;
+    }
+
+    .articles-gallery article {
+        display: flex;
+        padding: 10px 10px;
+
+    }
+
+
+
+
+    .articles-gallery article img {}
+}
