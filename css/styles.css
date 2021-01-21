@@ -12,12 +12,12 @@ NEGRO: #241C22;
 
 
 :root {
-    --verde: #5C6853;
-    --rojo: #923413;
-    --azul: #7791A0;
-    --amarillo: #D2A741;
-    --blanco: #FBF8E7;
-    --negro: #241C22;
+    --green: #5C6853;
+    --red: #923413;
+    --blue: #7791A0;
+    --yellow: #D2A741;
+    --white: #FBF8E7;
+    --black: #241C22;
 }
 
 * {
@@ -86,16 +86,31 @@ figure {}
 }
 
 
+.bg-red {
+    background-color: var(--red);
+}
+
+
+
+
 /* COLUMN SYSTEM */
 
 /* SMALL COLUMN SYSTEM BASE 6*/
-.col-1 {}
+.col-1 {
+    width: calc((100vw - 40px) * (1/6));
+}
 
-.col-2 {}
+.col-2 {
+    width: calc((100vw - 40px) * (2/6));
+}
 
-.col-3 {}
+.col-3 {
+    width: calc((100vw - 40px) * (3/6));
+}
 
-.col-4 {}
+.col-4 {
+    width: calc((100vw - 40px) * (4/6));
+}
 
 .col-5 {
     width: calc((100vw - 40px) * (5/6));
@@ -123,6 +138,17 @@ figure {}
 
 .small-only {
     display: block;
+}
+
+.volver {
+    display: flex;
+    align-items: center
+}
+
+.volver p {
+    display: inline-block;
+    flex-direction: row;
+    font-size: 1.6rem;
 }
 
 
@@ -211,6 +237,11 @@ figure {}
 
 /*===========ARTICLE GALLERY STYLES=============*/
 
+.category-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .articles-gallery {
     display: flex;
     flex-flow: wrap;
@@ -294,9 +325,89 @@ figure {}
 
 /*===========ARTICLE STYLES=============*/
 
+.article-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-container {
+    max-width: 500px;
+}
+
+.article-header .article-info {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
 
 
+.article-header .article-info h3 {
+    display: block;
+    font-size: 1.6rem;
+}
 
+.article {}
+
+.headline {
+    font-size: 1.8rem;
+    padding: 10px 0;
+}
+
+.article {
+    font-size: 1.6rem;
+}
+
+.article figure img {
+    border-radius: 50%;
+}
+
+aside .list {
+    padding-left: 40px;
+}
+
+article ol {
+    padding-left: 40px;
+}
+
+/*===========FOOTER STYLES=============*/
+
+footer {
+    font-size: 1.4rem;
+    margin-top: 30px;
+
+}
+
+footer img {
+    border-radius: 50%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 0.5px solid;
+    border-color: var(--black);
+    padding-top: 30px;
+}
+
+.footer-nav {
+    padding-left: 20px;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .legal {
+    text-align: right;
+    margin-top: 20px;
+}
 
 /*===========MEDIA QYERY STYLES=============*/
 
@@ -312,7 +423,9 @@ figure {}
         width: calc(100vw * (1/12));
     }
 
-    .col-2-l {}
+    .col-2-l {
+        width: calc(100vw * (2/12));
+    }
 
     .col-3-l {
         width: calc(100vw * (3/12));
@@ -326,31 +439,60 @@ figure {}
         width: calc(100vw * (5/12));
     }
 
-    .col-6-l {}
+    .col-6-l {
+        width: calc(100vw * (6/12));
+    }
 
     .col-7-l {
         width: calc(100vw * (7/12));
     }
 
-    .col-8-l {}
+    .col-8-l {
+        width: calc(100vw * (8/12));
+    }
 
-    .col-9-l {}
+    .col-9-l {
+        width: calc(100vw * (9/12));
+    }
 
-    .col-10-l {}
+    .col-10-l {
+        width: calc(100vw * (10/12));
+    }
 
-    .col-11-l {}
+    .col-11-l {
+        width: calc(100vw * (11/12));
+    }
 
-    .col-12-l {}
+    .col-12-l {
+        width: calc(100vw * (12/12));
+    }
 
 
     .container {
         padding: 0;
     }
 
+
+    .volver {
+        position: relative;
+    }
+
+    .volver svg {
+        margin: 10px auto;
+    }
+
+    .volver p {
+        position: absolute;
+        left: calc(100vw * (1/12) + 10px);
+        display: inline;
+        width: 200%;
+        font-size: 1.2vw;
+    }
+
     /*===========INDEX STYLES=============*/
 
 
-    main {
+    .index-main {
         display: flex;
         flex-direction: row;
     }
@@ -373,12 +515,6 @@ figure {}
         flex-direction: row;
     }
 
-    main.container {
-        padding-top: 4vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
     .main-nav ul {
         justify-content: flex-start;
@@ -411,12 +547,38 @@ figure {}
         align-content: flex-end;
     }
 
-    /*===========ARTICLE GALLERY STYLES=============*/
+    /*===========ARTICLES GALLERY STYLES=============*/
+
+    .category-header {
+        align-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+
+    }
+
+    h1.category-title {
+        transform: rotate(-90deg) translateY(-130%) translateX(50%);
+        position: absolute;
+        bottom: 0;
+        font-size: 4vw;
+        display: inline;
+        width: max-content;
+        color: var(--white);
+    }
 
     .gallery-wrapper {
         display: flex;
         flex-direction: column;
 
+    }
+
+    .articles-gallery-container {
+        padding-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .articles-gallery {
@@ -426,6 +588,7 @@ figure {}
         justify-content: center;
         max-width: none;
         margin-bottom: 60px;
+        margin-left: calc(100vw * (1/12));
     }
 
     .articles-gallery h2 {
@@ -440,11 +603,73 @@ figure {}
     .articles-gallery article {
         display: flex;
         padding: 10px 10px;
+        border-color: var(--black);
 
     }
 
+    .articles-gallery article:nth-child(3n+2) {
+        border-left: 0.5px solid;
+        border-right: 0.5px solid;
+    }
 
-
+    .articles-gallery article:nth-child(-n+3) {
+        border-bottom: 0.5px solid;
+    }
 
     .articles-gallery article img {}
+
+    /*===========ARTICLE STYLES=============*/
+
+    .article-nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-nav h1 {
+        width: 65%;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: row;
+        max-width: none;
+    }
+
+    .article-container aside {
+        width: 35%;
+    }
+
+    .article-wrapper {
+        width: 65%;
+    }
+
+    .article-text {
+        margin-left: calc(100% * (1/8));
+        width: calc(100% * (5/8));
+        max-width: 560px;
+    }
+
+    aside .gallery {
+        padding-left: 30px;
+        padding-right: 30px;
+        border-right: 0.5px solid;
+        border-color: var(--black);
+    }
+
+    aside .list {
+        padding-left: calc((100% - 60px) * (2/4));
+        border-right: 0.5px solid;
+        border-color: var(--black);
+    }
+
+    /*===========FOOTER STYLES=============*/
+
+    .footer-container {
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    footer .legal {
+        text-align: right;
+    }
 }
