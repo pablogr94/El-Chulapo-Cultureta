@@ -10,11 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Karla:wght@400;700&family=Taviraj&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Javascript -->
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
     <main class="index-main">
         <figure class="home-background">
+            <div class="overlay"></div>
             <img src="img/Goya-baile-manzanares.jpg">
         </figure>
         <figure class="logo col-5 center small-only">
@@ -22,7 +27,9 @@
         </figure>
         <nav id="main-nav" class="main-nav col-7-l">
             <ul>
-                <li>
+                <li id="rincones">
+                    <div class="color-frame bg-green">
+                    </div>
                     <div class="item-container border-bottom">
                         <div class="item-title">
                             <h1>Rincones de Madrid</h1>
@@ -30,8 +37,11 @@
                         </div>
                         <span class="arrow-right"></span>
                     </div>
+
                 </li>
-                <li>
+                <li id="comer">
+                    <div class="color-frame bg-red">
+                    </div>
                     <div class="item-container border-bottom">
                         <div class="item-title">
                             <h1>Comer bien</h1>
@@ -40,7 +50,9 @@
                         <span class="arrow-right"></span>
                     </div>
                 </li>
-                <li>
+                <li id="cultura">
+                    <div class="color-frame bg-blue">
+                    </div>
                     <div class="item-container border-bottom">
                         <div class="item-title">
                             <h1>Los culturetas</h1>
@@ -49,7 +61,9 @@
                         <span class="arrow-right"></span>
                     </div>
                 </li>
-                <li>
+                <li id="taller">
+                    <div class="color-frame bg-yellow">
+                    </div>
                     <div class="item-container">
                         <div class="item-title">
                             <h1>El taller</h1>
