@@ -6,66 +6,74 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Karla:wght@400;700&family=Taviraj&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header>
-        <div class="volver">
-            <span class="arrow-left"></span>
+    <header class="container article-nav">
+        <div class="volver-atras">
+            <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L2 11L12 21" stroke="#241C22" stroke-width="2" />
+                <path d="M2 11H43" stroke="#241C22" stroke-width="2" />
+            </svg>
+
             <p>Volver al inicio</p>
         </div>
         <h1>Rosbif Marinado con soja y miel.</h1>
     </header>
-    <main>
+    <main class="container article-container center">
         <aside class="large-only">
-            <div class="gallery">
+            <div class="gallery list">
                 <figure><img src=""></figure>
                 <figure><img src=""></figure>
                 <figure><img src=""></figure>
                 <figure><img src=""></figure>
             </div>
         </aside>
-        <section class="article-header">
-            <figure><img src=""></figure>
-            <div class="article-info">
-                <h3>Por Erika Suarez - <i class="color">Comer bien</i></h3>
-                <span>17/01/2021</span>
+        <div class="article-wrapper">
+            <div class="article-text">
+                <section class="article-header">
+                    <div class="article-info border-bottom">
+                        <h3 class="col-4">Por Erika Suarez - <i class="color">Rinconces de Madrid</i></h3>
+                        <span>17/01/2021</span>
+                    </div>
+                    <div class="headline border-bottom">
+                        <p>En 1725, un sobrino del cocinero francés Jean Botín abrió una pequeña posada, en el número 17 de la calle Cuchilleros de Madrid, y en planta baja instaló un horno de leña.</p>
+                    </div>
+                </section>
+                <section>
+                    <article class="article">
+                        <ol>
+                            <li>
+                                <p>El Viajero (Plaza de la cebada, 11) es otro de los mejores planes para un domingo en el castizo barrio de La Latina. Otro de los buenos locales donde tomarse un delicioso mojito, su cocktail estrella: Lima, hierbabuena fresca y ron añejo. Elaborado con el toque especial de la casa, es famoso entre los adeptos al barrio. El local cuenta con una animada y solicitada terraza en la última planta con unas espectaculares vistas, probablemente las mejores de todo el viejo Madrid. Muy recomendables sus platos de cocina ítalo-argentina. Metro: Latina.</p>
+                            </li>
+                            <li>
+                                <p>Terraza del Hotel Jardines de Sabatini Aparto Suites. En la 7ª planta de este hotel situado en el nº 16 de la Cuesta de San Vicente, nos encontramos con una espectacular terraza que nos ofrece unas impactantes vistas del Palacio Real y unos atardeceres sencillamente mágicos. Unas vistas insuperables que te permiten comprobar cómo va cambiando el color de la piedra del Palacio Real bajo la luz de los atardeceres madrileños. ¡Todo un espectáculo! Además, en los meses de calor, podremos picar algo, el salmorejo, el ceviche o los tacos de solomillo son deliciosos, o simplemente tomar un copa bajo las estrellas del cielo de Madrid. Un rincón perfecto para relajarse mientras se disfruta de unas vistas increíbles de Madrid. Una de esas visitas obligatorias si lo que pretendes es dejar a alguien boquiabierto.Y por si todo lo anterior no os parece suficiente, podremos visitar el museo de coches antiguos situado en los bajos del hotel, un viaje en el tiempo a través de una interesante colección de vehículos antiguos y clásicos entre los que destacan un Ford T de 1915, un Benz de 1890, un Hudson de 1942, una Isetta de los años 50 o una Harley-Davidson de 1942. Es imprescindible reservar con antelación. Metro: Príncipe Pio o Plaza de España.</p>
+                                <figure class="small-only"><img src=""></figure>
+                            </li>
+                            <li>
+                                <p>Mirador del Templo de Debod. Con toda la Casa de Campo a nuestros pies y unas espectaculares puestas de sol, el Templo de Debod (Ferraz, 1), un auténtico templo egipcio con más de dos mil años de antigüedad traído piedra a piedra desde Egipto y reconstruido cuidadosamente en la capital, está situado en uno de los parajes más bellos de la ciudad de Madrid, junto al Parque del Oeste. El mirador, situado a espaldas del templo, permite contemplar unas preciosas vistas del Palacio Real o la Catedral de la Almudena y una panorámica del entorno de la ciudad que abarca desde la Casa de Campo hasta las cumbres del Guadarrama. El conjunto formado por el Templo de Debod, el estanque, el mirador y el Parque del Oeste, constituyen el marco perfecto para disfrutar de las magníficas puestas de sol madrileñas. Una de las visitas imprescindibles en Madrid, un rincón de una belleza única, que desde estas líneas os recomiendo no dejéis de visitar. Metro: Plaza de España o Ventura Rodríguez.</p>
+                                <figure class="small-only"><img src=""></figure>
+                            </li>
+                            <li>
+                                <p>Cerro del Tío Pío. O como todo el mundo lo conoce por las suaves formas de sus colinas artificiales, el parque de las siete tetas. Situado en el barrio de Vallecas, el Parque del Cerro del Tío Pío es uno de los mejores lugares de Madrid para contemplar una panorámica completa de la capital y en especial, para disfrutar de uno los mejores atardeceres. Desde este parque podremos ver el skyline con Torre España, Puerta de Europa y las Cuatro Torres, y también el edificio de la Telefónica, las Torres de Colón y las cúpulas y torres de las numerosas iglesias con que cuenta Madrid. Para acceder el parque lo más rápido es coger la línea 1 de metro hasta la estación Buenos Aires.</p>
+                                <figure class="small-only"><img src=""></figure>
+                            </li>
+                        </ol>
+                    </article>
+                </section>
             </div>
-        </section>
-        <section>
-            <article>
-                <div class="content">
-                    <ol>
-                        <li>
-                            <p>El Viajero (Plaza de la cebada, 11) es otro de los mejores planes para un domingo en el castizo barrio de La Latina. Otro de los buenos locales donde tomarse un delicioso mojito, su cocktail estrella: Lima, hierbabuena fresca y ron añejo. Elaborado con el toque especial de la casa, es famoso entre los adeptos al barrio. El local cuenta con una animada y solicitada terraza en la última planta con unas espectaculares vistas, probablemente las mejores de todo el viejo Madrid. Muy recomendables sus platos de cocina ítalo-argentina. Metro: Latina.</p>
-                        </li>
-                        <li>
-                            <p>Terraza del Hotel Jardines de Sabatini Aparto Suites. En la 7ª planta de este hotel situado en el nº 16 de la Cuesta de San Vicente, nos encontramos con una espectacular terraza que nos ofrece unas impactantes vistas del Palacio Real y unos atardeceres sencillamente mágicos. Unas vistas insuperables que te permiten comprobar cómo va cambiando el color de la piedra del Palacio Real bajo la luz de los atardeceres madrileños. ¡Todo un espectáculo! Además, en los meses de calor, podremos picar algo, el salmorejo, el ceviche o los tacos de solomillo son deliciosos, o simplemente tomar un copa bajo las estrellas del cielo de Madrid. Un rincón perfecto para relajarse mientras se disfruta de unas vistas increíbles de Madrid. Una de esas visitas obligatorias si lo que pretendes es dejar a alguien boquiabierto.Y por si todo lo anterior no os parece suficiente, podremos visitar el museo de coches antiguos situado en los bajos del hotel, un viaje en el tiempo a través de una interesante colección de vehículos antiguos y clásicos entre los que destacan un Ford T de 1915, un Benz de 1890, un Hudson de 1942, una Isetta de los años 50 o una Harley-Davidson de 1942. Es imprescindible reservar con antelación. Metro: Príncipe Pio o Plaza de España.</p>
-                            <figure class="small-only"><img src=""></figure>
-                        </li>
-                        <li>
-                            <p>Mirador del Templo de Debod. Con toda la Casa de Campo a nuestros pies y unas espectaculares puestas de sol, el Templo de Debod (Ferraz, 1), un auténtico templo egipcio con más de dos mil años de antigüedad traído piedra a piedra desde Egipto y reconstruido cuidadosamente en la capital, está situado en uno de los parajes más bellos de la ciudad de Madrid, junto al Parque del Oeste. El mirador, situado a espaldas del templo, permite contemplar unas preciosas vistas del Palacio Real o la Catedral de la Almudena y una panorámica del entorno de la ciudad que abarca desde la Casa de Campo hasta las cumbres del Guadarrama. El conjunto formado por el Templo de Debod, el estanque, el mirador y el Parque del Oeste, constituyen el marco perfecto para disfrutar de las magníficas puestas de sol madrileñas. Una de las visitas imprescindibles en Madrid, un rincón de una belleza única, que desde estas líneas os recomiendo no dejéis de visitar. Metro: Plaza de España o Ventura Rodríguez.</p>
-                            <figure><img src="small-only"></figure>
-                        </li>
-                        <li>
-                            <p>Cerro del Tío Pío. O como todo el mundo lo conoce por las suaves formas de sus colinas artificiales, el parque de las siete tetas. Situado en el barrio de Vallecas, el Parque del Cerro del Tío Pío es uno de los mejores lugares de Madrid para contemplar una panorámica completa de la capital y en especial, para disfrutar de uno los mejores atardeceres. Desde este parque podremos ver el skyline con Torre España, Puerta de Europa y las Cuatro Torres, y también el edificio de la Telefónica, las Torres de Colón y las cúpulas y torres de las numerosas iglesias con que cuenta Madrid. Para acceder el parque lo más rápido es coger la línea 1 de metro hasta la estación Buenos Aires.</p>
-                            <figure><img src="small-only"></figure>
-                        </li>
-                    </ol>
-                </div>
-            </article>
-            <div class="page-marker large-only">
-                <span class="arrow-down"></span>
-                <p>1/3</p>
-            </div>
-        </section>
+        </div>
     </main>
-    <footer>
+    <footer class="container">
         <div class="footer-container">
-            <figure>
+            <figure class="col-2 col-3-l">
                 <img src="">
             </figure>
-            <nav class="footer-nav">
+            <nav class="footer-nav col-3 col-2-l">
                 <ul>
                     <li><a href="#">Rincones de Madrid</a></li>
                     <li><a href="#">Comer bien</a></li>
@@ -73,7 +81,7 @@
                     <li><a href="#">El taller</a></li>
                 </ul>
             </nav>
-            <div class="legal">
+            <div class="legal col-6 col-3-l">
                 <p>
                     <a href="#">Nota Legal</a> | <a href="#">Condiciones generales</a>
                 </p>
@@ -82,7 +90,7 @@
                 </p>
             </div>
         </div>
-        <p>&copy; 2021 El Chulapo Cultureta</p>
+        <p class="copyright center-text">&copy; 2021 El Chulapo Cultureta</p>
     </footer>
 
 </body>

@@ -28,12 +28,24 @@ NEGRO: #241C22;
 
 }
 
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Karla:wght@400;700&family=Taviraj&display=swap');
+
+
+
+/*
+font-family: 'Cormorant', serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Taviraj', serif;
+*/
+
 html {
     font-size: 10px;
 }
 
 body {
     width: 100%;
+    background-color: var(--white);
 }
 
 main {}
@@ -45,6 +57,29 @@ img {
 }
 
 figure {}
+
+p {
+    font-family: 'Cormorant', serif;
+}
+
+h1 {
+    font-family: 'Taviraj', serif;
+    font-weight: 400;
+
+    line-height: 88%;
+}
+
+h2 {
+    font-family: 'Taviraj', serif;
+    font-weight: 400;
+    line-height: 88%;
+}
+
+
+button {
+    border-radius: 50%;
+}
+
 
 /* GLOBAL STYLES */
 
@@ -140,17 +175,43 @@ figure {}
     display: block;
 }
 
-.volver {
+.volver-inicio {
     display: flex;
-    align-items: center
+    align-items: center;
+    color: var(--white);
 }
 
-.volver p {
+.volver-inicio svg path {
+    stroke: var(--white);
+}
+
+.volver-inicio p {
     display: inline-block;
     flex-direction: row;
     font-size: 1.6rem;
 }
 
+
+.volver-atras {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.volver-atras p,
+.volver-inicio p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-left: 10px;
+}
+
+.volver-atras svg,
+.volver-inicio svg {
+    width: 30px;
+    height: 15px
+}
 
 /*===========INDEX STYLES=============*/
 
@@ -167,7 +228,7 @@ figure {}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .home-background {
@@ -181,6 +242,7 @@ figure {}
 
 .main-nav {
     height: 63vh;
+    background-color: var(--white);
 }
 
 .main-nav ul {
@@ -199,7 +261,14 @@ figure {}
     width: 100%;
 }
 
+.main-nav ul li {}
+
 .item-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -211,6 +280,8 @@ figure {}
 
 .item-title p {
     font-size: 1.6rem;
+    font-family: 'Karla', sans-serif;
+    padding-top: 10px;
 }
 
 .access {
@@ -227,7 +298,7 @@ figure {}
 
 .access button {
     width: 90px;
-    height: 54px;
+    height: 60px;
 }
 
 /*===========LOGIN STYLES=============*/
@@ -240,6 +311,13 @@ figure {}
 .category-header {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.category-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3.0rem;
+    color: var(--white);
 }
 
 .articles-gallery {
@@ -258,6 +336,8 @@ figure {}
 
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 0.5px solid;
+    border-bottom-color: var(--black);
 
 }
 
@@ -269,6 +349,7 @@ figure {}
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.6rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .articles-gallery article figure {
@@ -328,6 +409,13 @@ figure {}
 .article-nav {
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.article-nav h1 {
+    font-size: 2.4rem;
+    margin-top: 20px;
 }
 
 .article-container {
@@ -473,15 +561,15 @@ footer .legal {
     }
 
 
-    .volver {
+    .volver-inicio {
         position: relative;
     }
 
-    .volver svg {
+    .volver-inicio svg {
         margin: 10px auto;
     }
 
-    .volver p {
+    .volver-inicio p {
         position: absolute;
         left: calc(100vw * (1/12) + 10px);
         display: inline;
@@ -489,8 +577,28 @@ footer .legal {
         font-size: 1.2vw;
     }
 
+    .volver-atras {
+        margin-left: 30px;
+    }
+
+
+
+    .volver-atras svg,
+    .volver-inicio svg {
+        width: 43px;
+        height: 22zpx
+    }
+
     /*===========INDEX STYLES=============*/
 
+    .home-background {
+        width: calc(100vw * (5/12));
+        right: 0;
+    }
+
+    .logo {
+        height: 30vh;
+    }
 
     .index-main {
         display: flex;
@@ -526,21 +634,27 @@ footer .legal {
         justify-content: flex-start;
     }
 
-    .item-title h1 {
-        font-size: 4.8rem;
+    .main-nav ul li .item-container {
+        justify-content: flex-start;
     }
 
-    .iten-title p {
-        font-size: 1.6rem;
+    .item-title h1 {
+        font-size: 3vw;
+    }
+
+    .item-title p {
+        font-size: 1.5vw;
     }
 
     .index-content {
         display: flex;
         flex-direction: column;
+        flex-flow: wrap;
+        align-content: flex-end;
     }
 
     .description {
-        height: 78vh;
+        height: 70vh;
         display: flex;
         flex-flow: wrap;
         justify-content: center;
@@ -558,8 +672,12 @@ footer .legal {
 
     }
 
+    .category-header p {
+        color: var(--black);
+    }
+
     h1.category-title {
-        transform: rotate(-90deg) translateY(-130%) translateX(50%);
+        transform: rotate(-90deg) translateY(-200%) translateX(50%);
         position: absolute;
         bottom: 0;
         font-size: 4vw;
@@ -575,10 +693,12 @@ footer .legal {
     }
 
     .articles-gallery-container {
-        padding-top: 4vh;
+        margin-top: 4vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-top: 0.5px solid;
+        border-color: var(--black);
     }
 
     .articles-gallery {
@@ -604,6 +724,7 @@ footer .legal {
         display: flex;
         padding: 10px 10px;
         border-color: var(--black);
+        border: none;
 
     }
 
@@ -623,10 +744,13 @@ footer .legal {
     .article-nav {
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .article-nav h1 {
         width: 65%;
+        font-size: 4.0rem;
     }
 
     .article-container {
