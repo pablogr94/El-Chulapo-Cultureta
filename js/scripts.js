@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     $("#taller").mouseenter(
         function () {
-            $(".home-background").find("img").attr("src", "img/La cometa.jpg");
+            $(".home-background").find("img").attr("src", "img/lashilanderas.jpg");
         }
     );
 
