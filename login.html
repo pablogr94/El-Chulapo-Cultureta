@@ -13,23 +13,33 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <p>Volver al inicio</p>
+    <figure class="login-background">
+        <div class="overlay"></div>
+        <img src="img/El_Quitasol.jpg">
+    </figure>
+    <main class="login-container">
+        <div class="login-header border-bottom">
+            <div class="volver-atras" onclick="location.href='index.html';">
+                <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1L2 11L12 21" stroke="#241C22" stroke-width="2" />
+                    <path d="M2 11H43" stroke="#241C22" stroke-width="2" />
+                </svg>
+
+                <p>Volver</p>
+            </div>
         </div>
-    </header>
+        <section class="form-container center border-bottom">
+            <div>
+                <h1 class="center-text">Iniciar sesión</h1>
+                <form>
+                    <input type="text" id="user" name="usuario" placeholder="Nombre de usuario" required>
+                    <input type="password" id="pass" name="contraseña" placeholder="Contraseña" required>
+                    <input class="center" type="submit" value="Acceder">
+                </form>
+            </div>
 
-    <main>
-        <form>
-            <h1>Inicio de sesión</h1>
-            <fieldset>
-                <input type="text" id="user" name="user" value="Nombre de usuario"><br>
-                <input type="text" id="password" name="password" value="Contraseña"><br>
-            </fieldset>
-            <input type="submit" value="Acceder">
-        </form>
+        </section>
     </main>
-
 </body>
 
 </html>
