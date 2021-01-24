@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -12,21 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <header>
-        <div>
-            <p>Volver al inicio</p>
+<body id="login" class="center-child">
+    <header class="border-bottom-white col-10-l">
+        <div class="login-volver">
+            <svg class="volver-atras svg" width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="flechablanca" d="M12 1L2 11L12 21" stroke="#241C22" stroke-width="2" />
+                <path class="flechablanca" d="M2 11H43" stroke="#241C22" stroke-width="2" />
+            </svg>
+            <p class="login-volverp">Volver al inicio</p>
         </div>
     </header>
 
     <main>
-        <form>
-            <h1>Inicio de sesión</h1>
+        <form class="center-child border-bottom-white col-10-l" id="formulario">
+            <h1 class="tituloformularios">Inicio de sesión</h1>
             <fieldset>
-                <input type="text" id="user" name="user" value="Nombre de usuario"><br>
-                <input type="text" id="password" name="password" value="Contraseña"><br>
+                <input class="rellenar" type="text" id="user" name="user" value="Nombre de usuario"><br>
+                <input class="rellenar" type="text" id="password" name="password" value="Contraseña"><br>
             </fieldset>
-            <input type="submit" value="Acceder">
+            <input class="botones" type="submit" value="Acceder">
         </form>
     </main>
 
